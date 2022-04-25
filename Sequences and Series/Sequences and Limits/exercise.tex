@@ -152,4 +152,41 @@ when $n \ge K$ for some $K \in \mathbb{N}$. We can simplify the expression on th
 From section 4, it is clear that since $\forall b \in R \Rightarrow \lim(\frac{b}{n}) = 0$, then $| \frac{5}{n} - 0 | = \frac{5}{n} < \epsilon$ \\
 $\therefore \lim(\frac{3n + 1}{2n + 5}) = \frac{3}{2}$
 
+\section{Show that}
+\subsection{$\lim(\frac{1}{\sqrt{n + 7}}) = 0$}
+
+We should first note that since $n \in \mathbb{N}$,
+\begin{equation*}
+    \frac{1}{\sqrt{n + 7}} < \frac{1}{\sqrt{n}}
+\end{equation*}
+
+For a given $\epsilon > 0$, we obtain $1/\sqrt{n} < \epsilon$ iff $n > 1/\epsilon^2$. 
+If we take $K > 1/\epsilon^2$ then it follows that for all $n \ge K$:
+
+\begin{equation*}
+    \Big|\frac{1}{\sqrt{n}} - 0 \Big| < \epsilon
+\end{equation*}
+
+\subsection{$\lim(\frac{2n}{n + 2}) = 2$}
+We should first note that since $n \in \mathbb{N}$,
+\begin{equation*}
+    \frac{2n}{\sqrt{n + 2}} < \frac{2n}{n} = 2
+\end{equation*}
+It is trivial to show that $|2 - 2| < \epsilon$ for all $\epsilon > 0$
+
+
+\subsection{$\lim(\frac{\sqrt{n}}{n + 1}) = 0$}
+We should first note that since $n \in \mathbb{N}$,
+\begin{equation*}
+    \frac{\sqrt{n}}{n + 1} < \frac{\sqrt{n}}{n} = \frac{1}{\sqrt{n}}
+\end{equation*}
+It is sufficient from 6.1 to conclude that $\lim(\frac{\sqrt{n}}{n + 1}) = 0$
+
+\subsection{$\lim(\frac{(-1)^n \cdot n}{n^2 + 1}) = 0$}
+We should first note that since $n \in \mathbb{N}$,
+\begin{equation*}
+    \frac{(-1)^n \cdot n}{n^2 + 1} < \frac{n}{n^2 + 1} < \frac{n}{n^2} = \frac{1}{n}
+\end{equation*}
+The result follows from section 4
+
 \end{document}
