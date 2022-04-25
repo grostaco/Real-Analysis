@@ -20,7 +20,7 @@ Thank you to @hierarkei for inspiring this idea
 
 # Sequences and Series
 ## Sequences and Their Limits
-An introductory chapter to sequences and limit definition, you can find the exercise answers [here](Sequences\ and\ Limits/exercise.pdf) 
+An introductory chapter to sequences and limit definition, you can find the exercise answers [here](Sequences%20and%20Series/Sequences%20and%20Limits/exercise.pdf) 
 
 
 # Contributing
