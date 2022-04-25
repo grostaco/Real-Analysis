@@ -1,0 +1,155 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\begin{document}
+\author{\textit{Xetera Mnemonics}\\\small{grostaco@gmail.com}}
+\title{Sequences and Limits}
+\maketitle
+
+\section{The sequence $(x_n)$ is defined by the following formulas for the \textit{n}th term. Write the first five terms in each case}
+\subsection{$x_n := 1 + (-1)^n$}
+
+\begin{align*}
+    x_1 & = 0 \\
+    x_2 & = 1 \\
+    x_3 & = 0 \\
+    x_4 & = 1 \\
+    x_5 & = 0
+\end{align*}
+
+\subsection{$x_n := \frac{(-1)^n}{n}$}
+
+\begin{align*}
+    x_1 & = -1 \\
+    x_2 & = \frac{1}{2} \\
+    x_3 & = \frac{-1}{3} \\
+    x_4 & = \frac{-1}{4} \\
+    x_5 & = \frac{1}{5}  
+\end{align*}
+
+\subsection{$x_n := \frac{1}{n(n + 1)}$}
+\begin{align*}
+    x_1 & = \frac{1}{2} \\
+    x_2 & = \frac{1}{6} \\
+    x_3 & = \frac{1}{12} \\
+    x_4 & = \frac{1}{20} \\
+    x_5 & = \frac{1}{30}  
+\end{align*}
+
+\subsection{$x_n := \frac{1}{n^2 + 2}$}
+\begin{align*}
+    x_1 & = \frac{1}{3} \\
+    x_2 & = \frac{1}{6} \\
+    x_3 & = \frac{1}{11} \\
+    x_4 & = \frac{1}{18} \\
+    x_5 & = \frac{1}{27}  
+\end{align*}
+
+\section{The first few terms of a sequence $(x_n)$ are given below. Assuming that the "natural pattern" indicated by these term persists, give a formula for the \textit{n}th term $x_n$}
+
+\subsection{$5$, $7$, $8$, $11$, ...,}
+\begin{equation*}
+    x_n = 3 + 2n
+\end{equation*}
+
+\subsection{$\frac{1}{2}$, $-\frac{1}{4}$, $\frac{1}{8}$, $-\frac{1}{16}$, ...,}
+\begin{equation*}
+    x_n = -(-\frac{1}{2})^n
+\end{equation*}
+
+\subsection{$\frac{1}{2}$, $-\frac{2}{3}$, $\frac{3}{4}$, $-\frac{4}{5}$, ...,}
+\begin{equation*}
+    x_n = \frac{n}{n+1}
+\end{equation*}
+
+\subsection{1, 4, 9, 16, ...,}
+\begin{equation*}
+    x_n = n^2
+\end{equation*}
+
+\section{List the first five terms of the following inductively defined sequences}
+\subsection{$x_1 := 1$, $x_{n + 1} := 3x_n + 1$}
+
+\begin{align*}
+    x_2 & = 4 \\
+    x_3 & = 13 \\
+    x_4 & = 40 \\
+    x_5 & = 121 \\
+    x_6 & = 364 
+\end{align*}
+
+\section{For any $b \in \mathbb{R}$, prove that $\lim(\frac{b}{n}) = 0$}
+If $\epsilon > 0$ is given, then $\frac{1}{\epsilon} > 0$. By the Archimedean property, there exists a natural number $K = K(\epsilon)$ such that $\frac{b}{K} < \epsilon$.
+Then, if $n \ge K$, we have that $\frac{b}{n} \le \frac{b}{K} < \epsilon$. Consequently, if $n \ge K$, then 
+
+\begin{equation*}
+    \Big|\frac{b}{n} - 0 \Big| = \frac{b}{n} < \epsilon 
+\end{equation*}
+$\therefore \lim(\frac{b}{n}) = 0$ 
+
+\section{Use the definition of the limit of a sequence to establish the following limits}
+\subsection{$\lim(\frac{n}{n^2 + 1}) = 0$}
+Let $\epsilon > 0$ be given. Let us first note that $n \in \mathbb{N}$ and
+\begin{equation*}
+    \frac{n}{n^2 + 1} < \frac{n}{n^2} = \frac{1}{n}
+\end{equation*}
+From the Archimedean Property there exists $K \in \mathbb{N}$ such that, $\frac{1}{K} < \epsilon$.
+If $n \ge K$, then $\frac{1}{n} \le \frac{1}{K} < \epsilon$, therefore 
+
+\begin{equation*}
+    \Big| \frac{n}{n^2 + 1} - 0 \Big| = \frac{n}{n^2 + 1} < \frac{n}{n^2} = \frac{1}{n} < \epsilon
+\end{equation*}
+$\therefore \lim(\frac{n}{n^2 + 1}) = 0$
+
+\subsection{$\lim(\frac{2n}{n + 1}) = 2$}
+Let $\epsilon > 0$ be given, we want to obtain the inequality 
+
+\begin{equation*}
+    \Big| \frac{2n}{n + 1} - 2 \Big| < \epsilon
+\end{equation*}
+when $n \ge K$ for some $K \in \mathbb{N}$. We can simplify the expression on the left:
+\begin{align*}
+    \Big| \frac{2n}{n + 1} - 2 \Big| & = \Big| \frac{2n - 2n - 2}{n + 1} \Big| \\
+                                     & = \Big| \frac{-2}{n + 1} \Big| \\
+                                    & = \frac{2}{n + 1} < \frac{2}{n} < \epsilon
+\end{align*}
+From section 4, it is clear that since $\forall b \in R \Rightarrow \lim(\frac{b}{n}) = 0$, then $| \frac{2}{n} - 0 | = \frac{2}{n} < \epsilon$\\
+
+
+$\therefore \lim(\frac{2n}{n^2 + 1}) = 2$
+
+
+\subsection{$\lim(\frac{3n + 1}{2n + 5}) = \frac{3}{2}$}
+Let $\epsilon > 0$ be given, we want to obtain the inequality 
+
+\begin{equation*}
+    \Big| \frac{3n + 1}{2n + 5} - \frac{3}{2} \Big| < \epsilon
+\end{equation*}
+when $n \ge K$ for some $K \in \mathbb{N}$. We can simplify the expression on the left:
+\begin{align*}
+    \Big| \frac{3n + 1}{2n + 5} - \frac{3}{2} \Big| & = \Big| \frac{6n + 2 - 6n - 15}{4n + 5} \Big| \\
+                                     & = \Big| \frac{-13}{4n + 5} \Big| \\
+                                    & = \frac{13}{4n + 5} < \frac{13}{n} = \frac{13}{n} < \epsilon
+\end{align*}
+From section 4, it is clear that since $\forall b \in R \Rightarrow \lim(\frac{b}{n}) = 0$, then $| \frac{13}{n} - 0 | = \frac{13}{n} < \epsilon$ \\
+$\therefore \lim(\frac{3n + 1}{2n + 5}) = \frac{3}{2}$
+
+\subsection{$\lim(\frac{n^2 - 1}{2n^2 + 3}) = \frac{1}{2}$}
+Let $\epsilon > 0$ be given, we want to obtain the inequality 
+
+\begin{equation*}
+    \Big| \frac{n^2 - 1}{2n^2 + 3} - \frac{1}{2} \Big| < \epsilon
+\end{equation*}
+when $n \ge K$ for some $K \in \mathbb{N}$. We can simplify the expression on the left:
+\begin{align*}
+    \Big| \frac{n^2 - 1}{2n^2 + 3} - \frac{1}{2} \Big| & = \Big| \frac{2n^2 - 2 - 2n^2 - 3}{4n^2 + 6} \Big| \\
+                                     & = \Big| \frac{-5}{4n^2 + 6} \Big| \\
+                                    & = \frac{5}{4n^2 + 6} < \frac{5}{4n^2} = \frac{5}{n^2} \le \frac{5}{n} < \epsilon
+\end{align*}
+From section 4, it is clear that since $\forall b \in R \Rightarrow \lim(\frac{b}{n}) = 0$, then $| \frac{5}{n} - 0 | = \frac{5}{n} < \epsilon$ \\
+$\therefore \lim(\frac{3n + 1}{2n + 5}) = \frac{3}{2}$
+
+\end{document}
