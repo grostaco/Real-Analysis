@@ -189,4 +189,27 @@ We should first note that since $n \in \mathbb{N}$,
 \end{equation*}
 The result follows from section 4
 
+\section{Let $x_n := 1/\ln(n + 1)$ for $n \in \mathbb{N}$}
+\subsection{Use the definition of limit to show that $\lim(x_n) = 0$}
+Since $\ln$ is a monotonically increasing function, we have that:
+
+\begin{equation*}
+    \frac{1}{\ln(n + 1)} < \frac{1}{\ln(n)}
+\end{equation*}
+We can find the inequality 
+\begin{align*}
+    \epsilon & > \frac{1}{\ln(n)} \\
+    \frac{1}{\epsilon} & < \ln(n) \\
+    e^{1/\epsilon} & < n 
+\end{align*}
+If we choose $K(\epsilon) = e^{1/\epsilon}$ and $n \ge K(\epsilon)$, it follows that 
+
+\begin{equation*}
+    \Big| \frac{1}{\ln(n + 1)} - 0 \Big| < \Big| \frac{1}{\ln(n)} \Big| = \frac{1}{\ln(n)} < \epsilon
+\end{equation*}
+$\therefore \lim(x_n) = 0$
+
+\subsection{Find a specific value of $K(\epsilon)$ as required in the definition of limit for each of (i) $\epsilon = 1/2$, and (ii) $\epsilon = 1/10$}
+Using $K(\epsilon) = e^{1/\epsilon}$, we have for (i) $K(1/2) = e^2$, and (ii) $K(1/10) = e^{10}$
+
 \end{document}
