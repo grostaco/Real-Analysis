@@ -212,4 +212,37 @@ $\therefore \lim(x_n) = 0$
 \subsection{Find a specific value of $K(\epsilon)$ as required in the definition of limit for each of (i) $\epsilon = 1/2$, and (ii) $\epsilon = 1/10$}
 Using $K(\epsilon) = e^{1/\epsilon}$, we have for (i) $K(1/2) = e^2$, and (ii) $K(1/10) = e^{10}$
 
+\section{Prove that $\lim(x_n) = 0$ iff $\lim(|x_n|) = 0$. Give an example to show that the convergence of $(|x_n|)$ need not imply the convergence of $(x_n)$}
+
+$(\Longrightarrow)$ If $\lim(x_n) = 0$, we have that given $\epsilon > 0$ 
+
+\begin{equation*}
+    |x_n - 0| < \epsilon 
+\end{equation*}
+For all $n \ge K(\epsilon) \in \mathbb{N}$.
+\\
+We will define $|x|$ as $\max\{-x, x\}$, we will have that
+
+\begin{align*}
+    ||x_n| - 0| & = \max\{\max\{x_n, -x_n\}, -\max\{x_n, -x_n\}\} \\
+                & = \max\{x_n, -x_n\} \\
+                & = |x_n - 0| \\
+                & < \epsilon
+\end{align*} 
+$(\Longleftarrow)$  If $\lim(|x_n|) = 0$, we have that given $\epsilon > 0$ 
+\begin{equation*}
+    ||x_n| - 0| < \epsilon 
+\end{equation*}
+For all $n \ge K(\epsilon) \in \mathbb{N}$.
+\\
+We will define $|x|$ as $\max\{-x, x\}$, we will have that
+
+\begin{align*}
+    ||x_n| - 0| & = \max\{\max\{x_n, -x_n\}, -\max\{x_n, -x_n\}\} \\
+                & = \max\{x_n, -x_n\} \\
+                & = |x_n - 0| \\
+                & < \epsilon
+\end{align*} 
+Thus concluding our proof. $x_n = (-1)^n$ is an example of a sequence with $\lim(|x_n|)$ converging but not $\lim(x_n)$
+
 \end{document}
