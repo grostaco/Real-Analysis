@@ -245,4 +245,22 @@ We will define $|x|$ as $\max\{-x, x\}$, we will have that
 \end{align*} 
 Thus concluding our proof. $x_n = (-1)^n$ is an example of a sequence with $\lim(|x_n|)$ converging but not $\lim(x_n)$
 
+\section{Show that if $x_n \ge 0$ for all $n \in \mathbb{N}$ and $\lim(x_n) = 0$, then $\lim(\sqrt{x_n}) = 0$}
+If $\lim(x_n) = 0$ then we have for all $\epsilon > 0$:
+
+\begin{equation*}
+    |x_n - 0| < \epsilon
+\end{equation*}
+which is equivalent to saying that $x_n < \epsilon$ as $x_n$ is positive (or zero).
+It follows that $\sqrt{x_n} < x_n < \epsilon$, and subsequently $|\sqrt{x_n}| < |x_n| < \epsilon$.
+
+\section{Prove that $\lim(x_n) = x$ and if $x > 0$, then there exists a natural number $M$ such that $x_n > 0$ for all $n \ge M$}
+
+If $\lim(x_n) = x$ and if $x > 0$ then for all $\epsilon > 0$
+\begin{equation*}
+    |x_n - x| < \epsilon 
+\end{equation*}
+
+ 
+
 \end{document}
