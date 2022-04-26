@@ -260,7 +260,20 @@ If $\lim(x_n) = x$ and if $x > 0$ then for all $\epsilon > 0$
 \begin{equation*}
     |x_n - x| < \epsilon 
 \end{equation*}
-
- 
+It follows that 
+\begin{equation*}
+    -\epsilon < x_n - x < \epsilon 
+\end{equation*}
+Since $\epsilon > 0$, we can choose $\epsilon = \frac{x}{2} > 0$
+\begin{equation*}
+    -\frac{x}{2} < x_n - x < \frac{x}{2}
+\end{equation*}
+We have that 
+\begin{align*}
+    -\frac{x}{2} & < x_n - x \\
+    -\frac{x}{2} + x & < x_n \\
+    \frac{x}{2} & < x_n
+\end{align*}
+Since $\frac{x}{2} > 0$, then by definition of limit, there exists $M = K(\epsilon) \in \mathbb{N}$ such that $x_n > 0$ for $n \ge M$
 
 \end{document}
