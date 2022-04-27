@@ -276,4 +276,51 @@ We have that
 \end{align*}
 Since $\frac{x}{2} > 0$, then by definition of limit, there exists $M = K(\epsilon) \in \mathbb{N}$ such that $x_n > 0$ for $n \ge M$
 
+\section{Show that $\lim(\frac{1}{n} - \frac{1}{n + 1}) = 0$}
+
+\begin{align*}
+    \frac{1}{n} - \frac{1}{n + 1} & = \frac{n + n + 1}{n^2 + n} \\
+                                  & = \frac{2n + 1}{n^2 + n} \\
+                                  & < \frac{2n + 1}{n^2} \\
+                                  & \le \frac{2n + n}{n^2} \\
+                                  & = \frac{3}{n} 
+\end{align*}    
+From section 4, it is clear that since $\forall b \in R \Rightarrow \lim(\frac{b}{n}) = 0$, then $| \frac{3}{n} - 0 | = \frac{2}{n} < \epsilon$. 
+Subsequently:
+
+\begin{align*}
+    |\frac{1}{n} - \frac{1}{n + 1} - 0| & \le |\frac{3}{n} | \\
+                                        & < \epsilon
+\end{align*}
+
+\section{Show that $\lim(\sqrt{n^2 + 1} - n) = 0$}
+
+\begin{align*}
+    \sqrt{n^2 + 1} - n & = \frac{(\sqrt{n^2 + 1} - n)(\sqrt{n^2 + 1} + n)}{\sqrt{n^2 + 1} + n} \\
+                       & = \frac{n^2 + 1 - n^2}{\sqrt{n^2 + 1} + n} \\
+                       & < \frac{1}{n + n} \\
+                       & = \frac{1}{2n}
+\end{align*}
+From the Archimedean property, there exists a natural number $K(\epsilon)$ such that  $\frac{1}{2K(\epsilon)} < \epsilon$ for all $\epsilon > 0$.
+It follows that 
+
+\begin{align*}
+    \Big| \sqrt{n^2 + 1} - n - 0 \Big| & < \frac{1}{2n} < \epsilon
+\end{align*}
+
+\section{Show that $\lim(1/3^n) = 0$}
+\begin{align*}
+    \Big| \frac{1}{3^n} - 0 \Big| & = 3^{-n} \\
+                                  & < \epsilon \\
+                       \ln(1/3^n) & < \epsilon \\
+                       n\ln(1/3)  & < \epsilon \\
+                               n  & > \epsilon/\ln(1/3)
+\end{align*}
+Thus if we choose $K(\epsilon) = \epsilon/\ln(1/3)$ then for $n \ge K(\epsilon)$, we have that 
+\begin{align*}    
+    \Big| \frac{1}{3^n} - 0 \Big| & < \epsilon 
+\end{align*}
+
+\section{Let $b \in \mathbb{R}$ satisfy $0 < b < 1$. Show that $\lim(nb^n) = 0$}
+
 \end{document}
